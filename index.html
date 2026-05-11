@@ -38,23 +38,38 @@
     }
 
     .visits-block {
-      width: 50%;
+      width: min(50%, 820px);      /* на ПК не слишком узкий */
       margin: 0 auto;
       max-height: none;
       overflow: visible;
-      color: #222;
+    
       font-family: "Idealist Sans Light SC", "Segoe UI", Arial, sans-serif;
-      font-size: clamp(34px, 2.2vw, 50px);
-      line-height: 1.32;
-      letter-spacing: 0.01em;
-      font-weight: 400;
+      font-size: clamp(18px, 1.3vw, 34px);   /* авто-масштаб */
+      line-height: 1.28;
     }
 
     .visit-row {
       white-space: nowrap;
       margin: 0;
-      padding: 0.16em 0;
+      padding: 0.10em 0;
     }
+
+/* Телефон */
+  @media (max-width: 768px) {
+    .visits-block-wrap {
+      padding: 18px 0 22px;
+    }
+
+    .visits-block {
+      width: 78%;                       /* шире на узком экране */
+      font-size: clamp(14px, 3.8vw, 20px);
+      line-height: 1.22;
+    }
+
+    .visit-row {
+      padding: 0.06em 0;
+    }
+  }
   </style>
 </head>
 <body>
