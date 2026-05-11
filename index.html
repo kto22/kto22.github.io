@@ -38,15 +38,19 @@
     }
 
     .visits-block {
-      width: min(50%, 820px);      /* на ПК не слишком узкий */
+      width: min(50%, 820px);
       margin: 0 auto;
       max-height: none;
       overflow: visible;
 
       font-family: "Idealist Sans Light SC", "Segoe UI", Arial, sans-serif;
-      font-size: clamp(18px, 1.3vw, 34px);   /* авто-масштаб */
+      font-size: clamp(20px, 1.4vw, 36px);
+      font-weight: 500;
+      color: #444444;
       line-height: 1.28;
       text-align: center;
+      font-variant: small-caps;           /* заглавные и строчные отличаются только размером */
+      font-feature-settings: "smcp" 1;    /* поддержка OpenType small-caps */
     }
 
     .visit-row {
@@ -63,10 +67,14 @@
     }
 
     .visits-block {
-      width: 78%;                       /* шире на узком экране */
-      font-size: clamp(14px, 3.8vw, 20px);
+      width: 78%;
+      font-size: clamp(16px, 4vw, 22px);
+      font-weight: 500;
+      color: #444444;
       line-height: 1.22;
       text-align: center;
+      font-variant: small-caps;
+      font-feature-settings: "smcp" 1;
     }
 
     .visit-row {
